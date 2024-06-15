@@ -28,18 +28,9 @@ var meta = 10041;
 val electrolytic_cell = Builder.start(loc, meta)
     .withPattern(
             FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle(
-                    "CCCCC",
-                    "CCCCC",
-                    "CCCCC")
-                .aisle(
-                    "CCCCC",
-                    "CAAAC",
-                    "CSCCC")
-                .aisle(
-                    "CCCCC",
-                    "CCCCC",
-                    "CCCCC")
+                .aisle("CCCCC","CCCCC","CCCCC")
+                .aisle("CCCCC","CAAAC","CSCCC")
+                .aisle("CCCCC","CCCCC","CCCCC")
                 .where("S", IBlockMatcher.controller(loc))
                 .where("~", IBlockMatcher.ANY)
                 .whereOr("C", 
@@ -55,27 +46,11 @@ val electrolytic_cell = Builder.start(loc, meta)
                 .build())
         .addDesign(
                 FactoryMultiblockShapeInfo.start()
-                .aisle(
-                    "CCC",
-                    "CCC",
-                    "CCC")
-                .aisle(
-                    "CCC",
-                    "SAE",
-                    "CCC")
-                .aisle(
-                    "CCC",
-                    "CAC",
-                    "CCC")
-                .aisle(
-                    "CCC",
-                    "CAC",
-                    "CCC")
-                .aisle(
-                    "CCC",
-                    "CCC",
-                    "CCC")
-
+                .aisle("CCC","CCC","CCC")
+                .aisle("CCC","SAE","CCC")
+                .aisle("CCC","CAC","CCC")
+                .aisle("CCC","CAC","CCC")
+                .aisle("CCC","CCC","CCC")
                 .where("A", <metastate:contenttweaker:copperalloycoilblock>)
                 .where("S", IBlockInfo.controller(loc))
                 .where("C", <metastate:gtadditions:ga_metal_casing_2:5>)
@@ -165,7 +140,6 @@ electrolytic_cell.recipeMap.recipeBuilder()
     .EUt(590)
     .buildAndRegister();
 
-//Cobaltite --> Cobalt
 electrolytic_cell.recipeMap.recipeBuilder()
     .notConsumable(<contenttweaker:silver_electrode>)
     .fluidInputs(<liquid:red_vitriol>*1000,<liquid:distilled_water>*1000)
@@ -185,6 +159,20 @@ electrolytic_cell.recipeMap.recipeBuilder()
     .EUt(590)
     .buildAndRegister();
 
-
+electrolytic_cell.recipeMap.recipeBuilder()
+    .notConsumable(<gregtech:meta_item_1:14035>)
+    .notConsumable(<gregtech:meta_item_1:14051>)
+    .fluidInputs(<liquid:sulfuric_acid_solution>*1000)
+    .fluidOutputs(<liquid:water>*50,<liquid:hydrogen>*50,<liquid:chlorine>*100,<liquid:sulfuric_acid>*500,<liquid:oxygen>*100,<liquid:hydrogen_peroxide>*200)
+    .duration(200)
+    .EUt(8)
+    .buildAndRegister();
 
             
+electrolytic_cell.recipeMap.recipeBuilder()
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+    .fluidInputs(<liquid:ethoxylated_nonylphenol>*1000,<liquid:water>*1000)
+    .fluidOutputs(<liquid:nonylphenol>*800,<liquid:ethylene_glycol>*800,<liquid:nonoxynol-9_solution>*200,<liquid:hydrogen>*200)
+    .duration(299)
+    .EUt(100)
+    .buildAndRegister();

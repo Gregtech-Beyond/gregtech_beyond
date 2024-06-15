@@ -28,36 +28,11 @@ var meta = 10006;
 val froth_flotation_cell = Builder.start(loc, meta)
     .withPattern(
             FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle(
-                    "~~P~~",
-                    "~CCC~",
-                    "PCCCP",
-                    "~CCC~",
-                    "~~P~~")
-                .aisle(
-                    "~~P~~",
-                    "~CCC~",
-                    "PC~CP",
-                    "~CCC~",
-                    "~~S~~")
-                .aisle(
-                    "~~~~~",
-                    "~CCC~",
-                    "~C~C~",
-                    "~CCC~",
-                    "~~~~~")
-                .aisle(
-                    "~~~~~",
-                    "~CCC~",
-                    "~C~C~",
-                    "~CCC~",
-                    "~~~~~")
-                .aisle(
-                    "~~~~~",
-                    "~CCC~",
-                    "~CGC~",
-                    "~CCC~",
-                    "~~~~~")
+                .aisle("~~P~~","~CCC~","PCCCP","~CCC~","~~P~~")
+                .aisle("~~P~~","~CCC~","PC~CP","~CCC~","~~S~~")
+                .aisle("~~~~~","~CCC~","~C~C~","~CCC~","~~~~~")
+                .aisle("~~~~~","~CCC~","~C~C~","~CCC~","~~~~~")
+                .aisle("~~~~~","~CCC~","~CGC~","~CCC~","~~~~~")
                 .where("S", IBlockMatcher.controller(loc))
                 .where("~", IBlockMatcher.ANY)
                 .whereOr("C", 
@@ -75,35 +50,35 @@ val froth_flotation_cell = Builder.start(loc, meta)
         .addDesign(
                 FactoryMultiblockShapeInfo.start()
                 .aisle(
-                    "  P  ",
-                    "  P  ",
-                    "     ",
-                    "     ",
-                    "     ")
+"  P  ",
+"  P  ",
+"     ",
+"     ",
+"     ")
                 .aisle(
-                    " CCC ",
-                    " CCC ",
-                    " CCC ",
-                    " CCC ",
-                    " CCC ")
+" CCC ",
+" CCC ",
+" CCC ",
+" CCC ",
+" CCC ")
                 .aisle(
-                    "PCCCP",
-                    "SC CP",
-                    " C E ",
-                    " C C ",
-                    " CGC ")
+"PCCCP",
+"SC CP",
+" C E ",
+" C C ",
+" CGC ")
                 .aisle(
-                    " CCC ",
-                    " CCC ",
-                    " CCC ",
-                    " CCC ",
-                    " CCC ")
+" CCC ",
+" CCC ",
+" CCC ",
+" CCC ",
+" CCC ")
                 .aisle(
-                    "  P  ",
-                    "  P  ",
-                    "     ",
-                    "     ",
-                    "     ")
+"  P  ",
+"  P  ",
+"     ",
+"     ",
+"     ")
                 .where("C", <metastate:gregtech:metal_casing:5>)
                 .where("P", <metastate:gregtech:boiler_casing:1>)
                 .where("G", <metastate:gregtech:multiblock_casing:1>)
@@ -115,7 +90,7 @@ val froth_flotation_cell = Builder.start(loc, meta)
 .withRecipeMap(
         FactoryRecipeMap.start(loc)
                         .maxInputs(4)
-                        .maxFluidInputs(3)
+                        .maxFluidInputs(4)
                         .maxFluidOutputs(2)
                         .maxOutputs(6)
                         .build())
@@ -416,4 +391,22 @@ froth_flotation_cell.recipeMap.recipeBuilder()
     .fluidOutputs(<liquid:used_froth_flotation_fluid>*200,<liquid:draconiumimpureslurry>*1000)
     .duration(280)
     .EUt(480)
+    .buildAndRegister();
+
+froth_flotation_cell.recipeMap.recipeBuilder()
+    .outputs(<gtadditions:ga_dust:944>*2)
+    .fluidInputs(<liquid:froth_flotation_fluid>*1000,<liquid:andesite_slurry>*1000)
+    .notConsumable(<contenttweaker:osmiumsieve>)
+    .fluidOutputs(<liquid:muddy_andesite_slurry>*1000)
+    .duration(500)
+    .EUt(2000)
+    .buildAndRegister();
+
+froth_flotation_cell.recipeMap.recipeBuilder()
+    .fluidInputs(<liquid:impure_monazite_ore_byproduct_slurry>*1000,<liquid:froth_flotation_fluid>*1000)
+    .notConsumable(<liquid:methyl_isobutyl_carbonyl>)
+    .notConsumable(<liquid:1_amidol_ethyl_2_alkyl_2_imidazoline>)
+    .fluidOutputs(<liquid:monazite_ore_byproduct_slurry>*1000,<liquid:used_froth_flotation_fluid>*1000)
+    .duration(800)
+    .EUt(70)
     .buildAndRegister();

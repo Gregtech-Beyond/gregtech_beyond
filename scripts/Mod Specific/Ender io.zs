@@ -1,3 +1,5 @@
+
+
 import mods.enderio.AlloySmelter;
 import mods.gregtech.recipe.PBFRecipeBuilder;
 import crafttweaker.item.IItemStack;
@@ -53,7 +55,7 @@ recipes.addShapeless(<enderio:item_alloy_nugget:9> * 9, [<enderio:item_alloy_ing
 recipes.addShapeless(<enderio:item_alloy_ingot:9> * 9, [<enderio:block_alloy:9>]);
 recipes.addShaped(<enderio:block_exit_rail>, [	[null, <ore:dustRegularRedstone>, null], 	[null, <ore:rail>, null], 	[null, <ore:craftingPiston>, null]]);
 recipes.addShaped(<enderio:block_dark_steel_ladder>*7, [	[<ore:ingotDarkSteel>, null, <ore:ingotDarkSteel>], 	[<ore:ingotDarkSteel>, <ore:ingotDarkSteel>, <ore:ingotDarkSteel>], 	[<ore:ingotDarkSteel>, null, <ore:ingotDarkSteel>]]);
-recipes.addShapeless(<gtadditions:ga_dust:32016>*3, [<ore:dustSilicon>, <ore:dustRegularIron>, <ore:dustRegularIron>,<ore:dustCoal>]);
+recipes.addShapeless(<gtadditions:ga_dust:32012>*3, [<ore:dustSilicon>, <ore:dustRegularIron>, <ore:dustRegularIron>,<ore:dustCoal>]);
 recipes.addShapeless(<enderio:item_redstone_nor_filter>, [<minecraft:redstone_torch>, <enderio:item_redstone_or_filter>]);
 recipes.addShapeless(<enderio:item_redstone_nand_filter>, [<minecraft:redstone_torch>, <enderio:item_redstone_and_filter>]);
 recipes.addShapeless(<enderio:item_redstone_xnor_filter>, [<minecraft:redstone_torch>, <enderio:item_redstone_xor_filter>]);
@@ -64,9 +66,9 @@ recipes.addShaped(<enderio:item_material:3>, [	[null, null, null], 	[null,null,n
 recipes.addShaped(<enderio:item_material:13>, [	[<ore:nuggetSteel>, <gregtech:meta_item_1:12550>, <ore:nuggetSteel>], 	[<gregtech:meta_item_1:12550>, null, <gregtech:meta_item_1:12550>], 	[<ore:nuggetSteel>, <gregtech:meta_item_1:12550>, <ore:nuggetSteel>]]);
 recipes.addShaped(<enderio:block_simple_wired_charger>, [	[<ore:compressed1xCobblestone>, <ore:compressed1xCobblestone>, <ore:compressed1xCobblestone>], 	[<ore:compressed1xCobblestone>, <ore:cableGtSingleTin>, <ore:compressed1xCobblestone>], 	[<ore:plateSteel>, <gregtech:machine:501>, <ore:plateSteel>]]);
 recipes.addShaped(<enderio:block_wired_charger>, [	[<ore:boltAluminium>, <gregtech:meta_item_1:32510>, <ore:boltAluminium>], 	[<ore:plateLead>, <enderio:block_simple_wired_charger>, <ore:plateLead>], 	[<ore:boltAluminium>, <ore:cableGtSingleIron>, <ore:boltAluminium>]]);
-
-
-
+recipes.addShapeless(<enderio:item_fluid_filter>,[<enderio:item_basic_item_filter>]);
+recipes.addShaped(<enderio:item_limited_item_filter>, [	[<ore:stickEmerald>, null, <ore:stickEmerald>], 	[<gregtech:meta_item_2:32477>, <enderio:item_advanced_item_filter>, <gregtech:meta_item_2:32477>], 	[<ore:stickEmerald>, null, <ore:stickEmerald>]]);
+recipes.addShaped(<enderio:item_extract_speed_upgrade>, [[null, <ore:wireGtSingleAluminium>, null], 	[<ore:ingotElectricalSteel>, <enderio:item_basic_item_filter>, <ore:ingotElectricalSteel>], 	[null, <ore:wireGtSingleAluminium>, null]]);
 
 
 recipes.addShaped(<enderio:block_reinforced_obsidian>, [	[<ore:stickLongNaquadriaticTaranium>, <ore:blockNaquadriaticCompound>, <ore:stickLongNaquadriaticTaranium>], 	[<ore:blockNaquadriaticCompound>, <ore:obsidian>, <ore:blockNaquadriaticCompound>], [<ore:stickLongNaquadriaticTaranium>, <ore:blockNaquadriaticCompound>, <ore:stickLongNaquadriaticTaranium>]]);
@@ -493,7 +495,7 @@ lcr.recipeBuilder()
 
 
 recipes.addShaped(<enderio:block_inventory_panel>, [	[<ore:plateAluminium>, <gregtech:meta_item_2:32433>, <ore:plateAluminium>], 	[<appliedenergistics2:material:24>, <ore:circuitAdvanced>, <appliedenergistics2:material:24>], 	[<ore:plateAluminium>, <gregtech:meta_item_2:32433>, <ore:plateAluminium>]]);
-
+recipes.addShapeless(<enderio:item_extract_speed_downgrade>,[<enderio:item_extract_speed_upgrade>]);
 
 
 

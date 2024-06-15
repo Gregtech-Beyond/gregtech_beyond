@@ -28,30 +28,9 @@ var meta = 10040;
 val gravity_separator = Builder.start(loc, meta)
     .withPattern(
             FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle(
-                    "~P~P",
-                    "~~~~",
-                    "CCCC",
-                    "CCCC",
-                    "CCCC",
-                    "CCCC",
-                    "CCCC")
-                .aisle(
-                    "~PPP",
-                    "~P~P",
-                    "CCCC",
-                    "C~~C",
-                    "CDDC",
-                    "C~~C",
-                    "CCSC")
-                .aisle(
-                    "~~~~",
-                    "~~~~",
-                    "CCCC",
-                    "CDDC",
-                    "C~~C",
-                    "CDDC",
-                    "CCCC")
+                .aisle("~P~P","~~~~","CCCC","CCCC","CCCC","CCCC","CCCC")
+                .aisle("~PPP","~P~P","CCCC","C~~C","CDDC","C~~C","CCSC")
+                .aisle("~~~~","~~~~","CCCC","CDDC","C~~C","CDDC","CCCC")
                 .where("S", IBlockMatcher.controller(loc))
                 .where("~", IBlockMatcher.ANY)
                 .whereOr("C", 
@@ -69,21 +48,21 @@ val gravity_separator = Builder.start(loc, meta)
         .addDesign(
                 FactoryMultiblockShapeInfo.start()
                 .aisle(
-                    "CCCCC  ",
-                    "CCCCC  ",
-                    "CCCCC  ")
+"CCCCC  ",
+"CCCCC  ",
+"CCCCC  ")
                 .aisle(
-                    "CCCCE P",
-                    "C G CPP",
-                    "CG GC  ")
+"CCCCE P",
+"C G CPP",
+"CG GC  ")
                 .aisle(
-                    "CCCCC  ",
-                    "S G C P",
-                    "CG GC  ")
+"CCCCC  ",
+"S G C P",
+"CG GC  ")
                 .aisle(
-                    "CCCCC P",
-                    "CCCCCPP",
-                    "CCCCC  ")
+"CCCCC P",
+"CCCCCPP",
+"CCCCC  ")
                 .where("C", <metastate:gregtech:metal_casing:4>)
                 .where("P", <metastate:gregtech:boiler_casing:1>)
                 .where("G", <metastate:contenttweaker:gravity_separator_rotor_block>)
@@ -125,8 +104,18 @@ gravity_separator.recipeMap.recipeBuilder()
     .buildAndRegister();
 
 gravity_separator.recipeMap.recipeBuilder()
+    .fluidInputs(<liquid:draconium_extraction_mixture>*4000)
+    .fluidOutputs(<liquid:draconium_extract>*4000)
     .inputs(<gtadditions:ga_dust:32187>)
     .outputs(<gtadditions:ga_dust:32188>)
     .duration(200)
     .EUt(7800)
+    .buildAndRegister();
+
+gravity_separator.recipeMap.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:2701>*6)
+    .outputs(<gtadditions:ga_dust:186>*6)
+    .fluidOutputs(<liquid:reethu_sulfate_solution>*1000,<liquid:alkalineearth_sulfate>*16000)
+    .duration(100)
+    .EUt(600)
     .buildAndRegister();

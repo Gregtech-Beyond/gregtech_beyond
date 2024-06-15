@@ -37,6 +37,7 @@ mods.tconstruct.Alloy.removeRecipe(<liquid:stone>);
 #mods.tconstruct.Casting.addTableRecipe(<gregtech:meta_item_1:10018>, <tconstruct:cast_custom>, <liquid:copper>, 144);
 #mods.tconstruct.Alloy.removeTableRecipe(<liquid:copper>);
 
+recipes.remove(<tconstruct:ingots>);
 
 alloy_smelter.recipeBuilder()
     .inputs(<gregtech:meta_item_1:19026>*4,<tconstruct:materials:18>)
@@ -87,7 +88,7 @@ mods.tconstruct.Melting.removeRecipe(<liquid:stainless_steel>);
 
 recipes.addShaped(<tconstruct:materials:14>, [	[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>], 	[<ore:plateSteel>, <ore:cast>, <ore:plateSteel>], 	[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]]);
 recipes.addShapeless(<minecraft:stone_button>,[<minecraft:stone>,<gregtech:meta_tool:5>]);
-
-
+recipes.addShaped(<tconstruct:seared_tank>, [	[<ore:ingotBrickSeared>, <ore:ingotBrickSeared>, <ore:ingotBrickSeared>], 	[<ore:ingotBrickSeared>, <ore:dustGlass>, <ore:ingotBrickSeared>], 	[<ore:ingotBrickSeared>, <ore:ingotBrickSeared>, <ore:ingotBrickSeared>]]);
+recipes.remove(<tconstruct:seared_tank>);
 
 

@@ -60,6 +60,8 @@ global cluster_mill           as RecipeMap = RecipeMap.getByName("cluster_mill")
 global pyro           as RecipeMap = RecipeMap.getByName("pyro");
 global fermenter           as RecipeMap = RecipeMap.getByName("fermenter");
 global electromagnetic_separator           as RecipeMap = RecipeMap.getByName("electromagnetic_separator");
+global arc_furnace           as RecipeMap = RecipeMap.getByName("arc_furnace");
+global polarizer        as RecipeMap = RecipeMap.getByName("polarizer");
 
 #DevTech
 global rock_crusher        as RecipeMap = RecipeMap.getByName("rock_crusher");
@@ -74,3 +76,5 @@ global fisher     as RecipeMap = RecipeMap.getByName("fisher");
 global roasters     as RecipeMap = RecipeMap.getByName("roasters");
 global inscriber     as RecipeMap = RecipeMap.getByName("inscriber");
 global componentassembler     as RecipeMap = RecipeMap.getByName("componentassembler");
+global ion_implanter     as RecipeMap = RecipeMap.getByName("ion_implanter");
+global cvd_unit_s     as RecipeMap = RecipeMap.getByName("cvd_unit_s");

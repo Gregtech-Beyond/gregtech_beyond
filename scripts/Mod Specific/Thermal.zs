@@ -56,17 +56,13 @@ mods.thermalexpansion.InductionSmelter.removeRecipe(<gregtech:meta_item_1:2112>,
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<thermalfoundation:material:289>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_1:12797>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_1:12152>);
-mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_2:26543>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_1:12694>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_1:12963>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_1:12031>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_2:26912>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_1:12071>);
-mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_1:12542>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_1:12741>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_2:26824>);
-mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_2:26561>);
-mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_1:12524>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_2:26807>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_1:12312>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<gregtech:meta_item_1:12094>);
@@ -101,7 +97,6 @@ mods.thermalexpansion.InductionSmelter.removeRecipe(<gregtech:meta_item_1:2518>,
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>, <gregtech:meta_item_1:2518>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>, <gregtech:meta_item_1:2017>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<gregtech:meta_item_1:2095>,<minecraft:sand>);
-mods.thermalexpansion.InductionSmelter.removeRecipe(<thermalfoundation:material:291>,<minecraft:sand>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<gregtech:meta_item_1:12095>, <minecraft:sand>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<gregtech:ore_iridium_0>, <minecraft:sand>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<gregtech:ore_iridium_0>,<thermalfoundation:material:865>);

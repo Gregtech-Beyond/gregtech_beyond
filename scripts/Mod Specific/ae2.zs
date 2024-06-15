@@ -36,7 +36,7 @@ recipes.addShaped(<appliedenergistics2:part:460>, [	[null, <ore:circuitGood>, nu
 recipes.addShaped(<appliedenergistics2:controller>,[	[<ore:plateKanthal>, <gregtech:meta_item_1:2111>, <ore:plateKanthal>], 	[<ore:platePlastic>, <ore:circuitAdvanced>, <ore:platePlastic>], [<ore:plateKanthal>, <gregtech:meta_item_1:2111>, <ore:plateKanthal>]]);
 recipes.addShaped(<appliedenergistics2:condenser>, [[<ore:ingotPalladium>, <ore:pearlFluix>, <ore:ingotPalladium>], 	[<ore:pearlFluix>, <enderio:item_basic_capacitor>, <ore:pearlFluix>], 	[<ore:ingotPalladium>, <ore:pearlFluix>, <ore:ingotPalladium>]]);
 recipes.addShaped(<appliedenergistics2:part:470>, [	[<appliedenergistics2:part:36>, <appliedenergistics2:part:36>, <appliedenergistics2:part:36>], 	[<enderio:item_basic_capacitor>, <appliedenergistics2:part:460>, <enderio:item_basic_capacitor>], 	[<ore:itemInsulatedGlassCable>, <ore:itemInsulatedGlassCable>, <ore:itemInsulatedGlassCable>]]);
-recipes.addShaped(<appliedenergistics2:crafting_unit>, [[<appliedenergistics2:material:43>, <ore:pearlFluix>, <appliedenergistics2:material:44>], 	[<contenttweaker:motor>, <gregtech:machine:503>, <contenttweaker:motor>], 	[<appliedenergistics2:part:16>, <contenttweaker:titaniumcircuit>, <appliedenergistics2:part:16>]]);
+recipes.addShaped(<appliedenergistics2:crafting_unit>, [[<appliedenergistics2:material:43>, <ore:pearlFluix>, <appliedenergistics2:material:44>], 	[<gregtech:meta_item_1:32642>, <gregtech:machine:503>, <gregtech:meta_item_1:32642>], 	[<appliedenergistics2:part:16>, <contenttweaker:titaniumcircuit>, <appliedenergistics2:part:16>]]);
 recipes.addShaped(<appliedenergistics2:quartz_growth_accelerator>, [	[<appliedenergistics2:material:17>, <enderio:item_basic_capacitor:1>, <appliedenergistics2:material:17>], 	[<appliedenergistics2:part:56>, <appliedenergistics2:fluix_block>, <appliedenergistics2:part:56>], 	[<appliedenergistics2:material:17>, <enderio:item_basic_capacitor:1>, <appliedenergistics2:material:17>]]);
 recipes.addShaped(<ae2stuff:grower>, [	[<appliedenergistics2:quartz_growth_accelerator>, <contenttweaker:tungstencircuit>, <appliedenergistics2:quartz_growth_accelerator>], 	[<appliedenergistics2:quartz_growth_accelerator>, <enderio:item_basic_capacitor:2>, <appliedenergistics2:quartz_growth_accelerator>], 	[<appliedenergistics2:quartz_growth_accelerator>, <contenttweaker:tungstencircuit>, <appliedenergistics2:quartz_growth_accelerator>]]);
 recipes.addShaped(<appliedenergistics2:part:340>, [	[null, <appliedenergistics2:part:360>, null], 	[null, <appliedenergistics2:material:24>, null], 	[null, <ore:circuitExtreme>, null]]);
@@ -216,14 +216,14 @@ assembler.recipeBuilder()
     .inputs(<enderio:item_material:15>,<gregtech:meta_item_1:2219>,<threng:material>)
     .outputs(<threng:material:5>)
     .duration(200)
-    .EUt(512)
+    .EUt(80)
     .buildAndRegister();
 
 assembler.recipeBuilder()
     .inputs(<appliedenergistics2:material:6>*2,<appliedenergistics2:material:45>*4,<threng:material:1>*2)
     .outputs(<threng:material:7>)
-    .duration(512)
-    .EUt(512)
+    .duration(80)
+    .EUt(80)
     .buildAndRegister();
 
 ebf.recipeBuilder()
@@ -232,7 +232,7 @@ ebf.recipeBuilder()
     .fluidInputs(<liquid:hydrogen>*2000)
     .property("temperature", 2700)
     .duration(800)
-    .EUt(512)
+    .EUt(80)
     .buildAndRegister();
 
 mixer.recipeBuilder()
@@ -255,7 +255,7 @@ assembler.recipeBuilder()
     .outputs(<appliedenergistics2:storage_cell_4k>.withTag({}))
     .fluidInputs(<liquid:soldering_alloy>*144)
     .duration(800)
-    .EUt(512)
+    .EUt(80)
     .buildAndRegister();
 
 assembler.recipeBuilder()
@@ -263,7 +263,7 @@ assembler.recipeBuilder()
     .outputs(<appliedenergistics2:storage_cell_16k>.withTag({}))
     .fluidInputs(<liquid:soldering_alloy>*144)
     .duration(800)
-    .EUt(512)
+    .EUt(80)
     .buildAndRegister();
 
 assembler.recipeBuilder()
@@ -271,7 +271,7 @@ assembler.recipeBuilder()
     .outputs(<appliedenergistics2:storage_cell_64k>.withTag({}))
     .fluidInputs(<liquid:soldering_alloy>*144)
     .duration(800)
-    .EUt(512)
+    .EUt(80)
     .buildAndRegister();
 
 assembler.recipeBuilder()
@@ -279,7 +279,7 @@ assembler.recipeBuilder()
     .outputs(<contenttweaker:dualitioncore>)
     .fluidInputs(<liquid:soldering_alloy>*576)
     .duration(800)
-    .EUt(512)
+    .EUt(80)
     .buildAndRegister();
 
 alloy_smelter.recipeBuilder()
@@ -300,7 +300,7 @@ alloy_smelter.recipeBuilder()
     .inputs(<appliedenergistics2:quartz_glass>*4,<gregtech:meta_item_1:12550>)
     .outputs(<appliedenergistics2:quartz_vibrant_glass>*4)
     .duration(80)
-    .EUt(512)
+    .EUt(80)
     .buildAndRegister();
 
 recipes.remove(<threng:material:9>);
@@ -326,8 +326,12 @@ assembler.recipeBuilder()
     .inputs(<appliedenergistics2:material:25>,<appliedenergistics2:interface>,<appliedenergistics2:molecular_assembler>)
     .outputs(<appliedenergistics2:material:53>)
     .duration(200)
-    .EUt(480)
+    .EUt(80)
     .buildAndRegister();
 
 recipes.addShaped(<appliedenergistics2:material:52>, [	[<ore:screwStainlessSteel>, <appliedenergistics2:material:23>, <ore:screwStainlessSteel>], 	[<ore:plateStainlessSteel>, <ore:crystalFluix>, <ore:plateStainlessSteel>], 	[null, <ore:plateStainlessSteel>, null]]);
+
+recipes.remove(<appliedenergistics2:part:220>);
+recipes.addShaped(<appliedenergistics2:part:220>, [	[<ore:screwCupronickel>, <ore:craftingPiston>, <ore:screwCupronickel>], 	[<ore:plateAluminium>, <appliedenergistics2:interface>, <ore:plateAluminium>], 	[<ore:screwCupronickel>, <ore:craftingPiston>, <ore:screwCupronickel>]]);
+
 

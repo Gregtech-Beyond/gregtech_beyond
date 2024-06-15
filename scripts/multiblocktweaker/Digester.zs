@@ -28,46 +28,11 @@ var meta = 10030;
 val digester = Builder.start(loc, meta)
     .withPattern(
             FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle(
-                    "~CCCCC~",
-                    "CHHHHHC",
-                    "CHHHHHC",
-                    "CHHHHHC",
-                    "CHHHHHC",
-                    "CHHHHHC",
-                    "~CCSCC~")
-                .aisle(
-                    "~C~~~C~",
-                    "CHGGGHC",
-                    "~GTTTG~",
-                    "~GT TG~",
-                    "~GTTTG~",
-                    "CHGGGHC",
-                    "~C~~~C~")
-                .aisle(
-                    "~C~~~C~",
-                    "CHGGGHC",
-                    "~GTTTG~",
-                    "~GT TG~",
-                    "~GTTTG~",
-                    "CHGGGHC",
-                    "~C~~~C~")
-                .aisle(
-                    "~~~~~~~",
-                    "~~HHH~~",
-                    "~HTTTH~",
-                    "~HT TH~",
-                    "~HTTTH~",
-                    "~~HHH~~",
-                    "~~~~~~~")
-                .aisle(
-                    "~~~~~~~",
-                    "~~~~~~~",
-                    "~~HHH~~",
-                    "~~HHH~~",
-                    "~~HHH~~",
-                    "~~~~~~~",
-                    "~~~~~~~")
+                .aisle("~CCCCC~","CHHHHHC","CHHHHHC","CHHHHHC","CHHHHHC","CHHHHHC","~CCSCC~")
+                .aisle("~C~~~C~","CHGGGHC","~GTTTG~","~GT TG~","~GTTTG~","CHGGGHC","~C~~~C~")
+                .aisle("~C~~~C~","CHGGGHC","~GTTTG~","~GT TG~","~GTTTG~","CHGGGHC","~C~~~C~")
+                .aisle("~~~~~~~","~~HHH~~","~HTTTH~","~HT TH~","~HTTTH~","~~HHH~~","~~~~~~~")
+                .aisle("~~~~~~~","~~~~~~~","~~HHH~~","~~HHH~~","~~HHH~~","~~~~~~~","~~~~~~~")
                 .where("S", IBlockMatcher.controller(loc))
                 .where("~", IBlockMatcher.ANY)
                 .whereOr("C", 
@@ -86,47 +51,47 @@ val digester = Builder.start(loc, meta)
         .addDesign(
                 FactoryMultiblockShapeInfo.start()
                 .aisle(
-                    " CCCCC ",
-                    " C   C ",
-                    " C   C ", 
-                    "       ",
-                    "       ")
+" CCCCC ",
+" C   C ",
+" C   C ", 
+"       ",
+"       ")
                 .aisle(
-                    "CHHHHHC",
-                    "CHGGGHC",
-                    "CHGGGHC", 
-                    "  HHH  ",
-                    "       ")
+"CHHHHHC",
+"CHGGGHC",
+"CHGGGHC", 
+"  HHH  ",
+"       ")
                 .aisle(
-                    "CHHHHHC",
-                    " GTTTG ",
-                    " GTTTG ", 
-                    " HTTTH ",
-                    "  HHH  ")
+"CHHHHHC",
+" GTTTG ",
+" GTTTG ", 
+" HTTTH ",
+"  HHH  ")
                 .aisle(
-                    "SHHHHHE",
-                    " GT TG ",
-                    " GT TG ", 
-                    " HT TH ",
-                    "  HHH  ")
+"SHHHHHE",
+" GT TG ",
+" GT TG ", 
+" HT TH ",
+"  HHH  ")
                 .aisle(
-                    "CHHHHHC",
-                    " GTTTG ",
-                    " GTTTG ", 
-                    " HTTTH ",
-                    "  HHH  ")
+"CHHHHHC",
+" GTTTG ",
+" GTTTG ", 
+" HTTTH ",
+"  HHH  ")
                 .aisle(
-                    "CHHHHHC",
-                    "CHGGGHC",
-                    "CHGGGHC", 
-                    "  HHH  ",
-                    "       ")
+"CHHHHHC",
+"CHGGGHC",
+"CHGGGHC", 
+"  HHH  ",
+"       ")
                 .aisle(
-                    " CCCCC ",
-                    " C   C ",
-                    " C   C ", 
-                    "       ",
-                    "       ")
+" CCCCC ",
+" C   C ",
+" C   C ", 
+"       ",
+"       ")
                 .where("T", <metastate:gregtech:wire_coil:3>)
                 .where("H", <metastate:gregtech:metal_casing:2>)
                 .where("G", <metastate:gtadditions:ga_transparent_casing:4>)
@@ -148,8 +113,8 @@ val digester = Builder.start(loc, meta)
 
 digester.recipeMap.recipeBuilder()
     .inputs(<gtadditions:ga_dust:32083>)
-    .fluidInputs(<liquid:nitric_acid> * 750)
-    .fluidOutputs(<liquid:muddybastnasitesolution>*750)
+    .fluidInputs(<liquid:nitric_acid> * 1000)
+    .fluidOutputs(<liquid:muddybastnasitesolution>*1000)
     .outputs(<gregtech:meta_item_1:2159>)
     .EUt(2000)
     .duration(280)
@@ -157,8 +122,9 @@ digester.recipeMap.recipeBuilder()
 
 digester.recipeMap.recipeBuilder()
     .inputs(<gregtech:meta_item_1:5281>)
-    .fluidInputs(<liquid:nitric_acid> * 750)
-    .fluidOutputs(<liquid:muddy_monazite_solution>*750)
+    .fluidInputs(<liquid:nitric_acid> * 1000)
+    .fluidOutputs(<liquid:muddy_monazite_solution>*1000)
+    .outputs(<gregtech:meta_item_1:2159>)
     .EUt(2000)
     .duration(280)
     .buildAndRegister();
@@ -169,4 +135,11 @@ digester.recipeMap.recipeBuilder()
     .outputs(<gregtech:meta_item_1:2774>,<gtadditions:ga_dust:32196>*2)
     .duration(400)
     .EUt(1200)
+    .buildAndRegister();
+
+digester.recipeMap.recipeBuilder()
+    .inputs(<gtadditions:ga_dust:32205>)
+    .outputs(<gtadditions:ga_dust:32206>)
+    .duration(200)
+    .EUt(800)
     .buildAndRegister();

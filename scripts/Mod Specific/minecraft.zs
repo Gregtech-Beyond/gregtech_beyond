@@ -31,6 +31,13 @@ vanilla.seeds.addSeed(<contenttweaker:barley>);
 vanilla.seeds.addSeed(<contenttweaker:cotton>);
 
 
-//game.getEntity("Fox").addDrop(<gregtech:gt.multiitem.food:1200>,0,1); // ribs drops ribs
+game.getEntity("cow").addDrop(<contenttweaker:pancreas>,0,1);
+game.getEntity("pig").addDrop(<contenttweaker:pancreas>,0,1);
+game.getEntity("sheep").addDrop(<contenttweaker:pancreas>,0,1);
+game.getEntity("chicken").addDrop(<contenttweaker:pancreas>,0,1);
 
 
+recipes.remove(<minecraft:paper>);
+recipes.remove(<minecraft:chest>);
+
+recipes.addShaped(<minecraft:fermented_spider_eye>, [[<minecraft:spider_eye>, <minecraft:red_mushroom>, null], [<ore:dustSugar>, null, null], 	[null, null, null]]);

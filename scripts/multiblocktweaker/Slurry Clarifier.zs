@@ -28,36 +28,11 @@ var meta = 10034;
 val slurry_clarifier = Builder.start(loc, meta)
     .withPattern(
             FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle(
-                    "~~~~~",
-                    "~CCC~",
-                    "~CCC~",
-                    "~CCC~",
-                    "~~~~~")
-                .aisle(
-                    "~CCC~",
-                    "C~~~C",
-                    "C~~~C",
-                    "C~~~C",
-                    "~CSC~")
-                .aisle(
-                    "~CCC~",
-                    "C~~~C",
-                    "C~~~C",
-                    "C~~~C",
-                    "~CCC~")
-                .aisle(
-                    "~CCC~",
-                    "CGGGC",
-                    "CGGGC",
-                    "CGGGC",
-                    "~CCC~")
-                .aisle(
-                    "~CCC~",
-                    "C~~~C",
-                    "C~~~C",
-                    "C~~~C",
-                    "~CCC~")
+                .aisle("~~~~~","~CCC~","~CCC~","~CCC~","~~~~~")
+                .aisle("~CCC~","C~~~C","C~~~C","C~~~C","~CSC~")
+                .aisle("~CCC~","C~~~C","C~~~C","C~~~C","~CCC~")
+                .aisle("~CCC~","CGGGC","CGGGC","CGGGC","~CCC~")
+                .aisle("~CCC~","C~~~C","C~~~C","C~~~C","~CCC~")
                 .where("S", IBlockMatcher.controller(loc))
                 .where("~", IBlockMatcher.ANY)
                 .whereOr("C", 
@@ -74,35 +49,35 @@ val slurry_clarifier = Builder.start(loc, meta)
         .addDesign(
                 FactoryMultiblockShapeInfo.start()
                 .aisle(
-                    "     ",
-                    " CCC ",
-                    " CCC ",
-                    " CCC ",
-                    " CCC ")
+"     ",
+" CCC ",
+" CCC ",
+" CCC ",
+" CCC ")
                 .aisle(
-                    " CCC ",
-                    "C   C",
-                    "C   C",
-                    "CGGGC",
-                    "C   C")
+" CCC ",
+"C   C",
+"C   C",
+"CGGGC",
+"C   C")
                 .aisle(
-                    " CCC ",
-                    "S   E",
-                    "C   C",
-                    "CGGGC",
-                    "C   C")
+" CCC ",
+"S   E",
+"C   C",
+"CGGGC",
+"C   C")
                 .aisle(
-                    " CCC ",
-                    "C   C",
-                    "C   C",
-                    "CGGGC",
-                    "C   C")
+" CCC ",
+"C   C",
+"C   C",
+"CGGGC",
+"C   C")
                 .aisle(
-                    "     ",
-                    " CCC ",
-                    " CCC ",
-                    " CCC ",
-                    " CCC ")
+"     ",
+" CCC ",
+" CCC ",
+" CCC ",
+" CCC ")
                 .where("C", <metastate:gregtech:metal_casing:5>)
                 .where("S", IBlockInfo.controller(loc))
                 .where("G", <metastate:gregtech:multiblock_casing:1>)
@@ -321,8 +296,23 @@ slurry_clarifier.recipeMap.recipeBuilder()
     .EUt(240)
     .buildAndRegister();
 
+slurry_clarifier.recipeMap.recipeBuilder()
+    .fluidInputs(<liquid:andesite_leach_slurry>*1000)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+    .outputs(<gtadditions:ga_dust:105>*4,<gtadditions:ga_dust:28>*4)
+    .fluidOutputs(<liquid:wastewater>*100)
+    .duration(800)
+    .EUt(240)
+    .buildAndRegister();
 
-
-
+slurry_clarifier.recipeMap.recipeBuilder()
+    .fluidInputs(<liquid:monazite_ore_byproduct_slurry>*1000)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+    .fluidOutputs(<liquid:wastewater>*100)
+    .outputs(<gtadditions:ga_dust:32070>*2,<gtadditions:ga_dust:32066>*2,<gregtech:meta_item_1:2743>*2)
+    .chancedOutput(<gtadditions:ga_dust:32065>*2, 5000, 0)
+    .duration(200)
+    .EUt(1200)
+    .buildAndRegister();
 
 

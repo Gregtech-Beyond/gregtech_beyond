@@ -45,6 +45,14 @@ val gravity_settler_tank = Builder.start(loc, meta)
                     "CFFC",
                     "~SC~")
                 .aisle(
+                    "~CC~",
+                    "CPPC",
+                    "C~~C",
+                    "CFFC",
+                    "CFFC",
+                    "CFFC",
+                    "~CC~")
+                .aisle(
                     "~~~~",
                     "~GG~",
                     "~GG~",
@@ -69,26 +77,10 @@ val gravity_settler_tank = Builder.start(loc, meta)
                 .build())
         .addDesign(
                 FactoryMultiblockShapeInfo.start()
-                .aisle(
-                    "       ",
-                    " CCCCC ",
-                    " CCCCC ",
-                    "       ")
-                .aisle(
-                    " CCCCC ",
-                    "SFFF PE",
-                    "C     C",
-                    " GGGGG ")
-                .aisle(
-                    " CCCCC ",
-                    "CFFF PC",
-                    "C     C",
-                    " GGGGG ")
-                .aisle(
-                    "       ",
-                    " CCCCC ",
-                    " CCCCC ",
-                    "       ")
+                .aisle("       "," CCCCC "," CCCCC ","       ")
+                .aisle(" CCCCC ","SFFF PE","CFFF PC"," GGGGG ")
+                .aisle(" CCCCC ","CFFF PC","CFFF PC"," GGGGG ")
+                .aisle("       "," CCCCC "," CCCCC ","       ")
                 .where("C", <metastate:gregtech:metal_casing:5>)
                 .where("S", IBlockInfo.controller(loc))
                 .where("P", <metastate:gregtech:boiler_casing:1>)
@@ -107,3 +99,11 @@ val gravity_settler_tank = Builder.start(loc, meta)
 .withZoom(0.5f)
 
 .buildAndRegister() as Multiblock;
+
+gravity_settler_tank.recipeMap.recipeBuilder()
+    .inputs(<appliedenergistics2:charged_quartz_ore>)
+    .outputs(<appliedenergistics2:material:1>*2)
+    .fluidInputs(<liquid:lava>*200)
+    .duration(40)
+    .EUt(50)
+    .buildAndRegister();

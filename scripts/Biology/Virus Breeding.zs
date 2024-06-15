@@ -159,7 +159,7 @@ fluidExtractor.recipeBuilder()
     .fluidOutputs(<liquid:sheep_blood>*1000)
     .outputs(<contenttweaker:syringe>)
     .duration(200)
-    .EUt(8000)
+    .EUt(800)
     .buildAndRegister();
 
 centrifuge.recipeBuilder()
@@ -511,6 +511,23 @@ lcr.recipeBuilder()
 
 //Peptone
 
+mixer.recipeBuilder()
+    .fluidInputs(<liquid:water>*1000)
+    .inputs(<contenttweaker:pancreas>)
+    .notConsumable(<gtadditions:ga_meta_item:32396>)
+    .fluidOutputs(<liquid:homogenized_pancreas_mixture>*1000)
+    .duration(200)
+    .EUt(800)
+    .buildAndRegister();
+
+centrifuge.recipeBuilder()
+    .fluidInputs(<liquid:homogenized_pancreas_mixture>*1000)
+    .notConsumable(<liquid:nonylphenol>)
+    .fluidOutputs(<liquid:trypsin>*50)
+    .duration(20)
+    .EUt(80)
+    .buildAndRegister();
+
 chemReactor.recipeBuilder()
     .fluidInputs(<liquid:liquid_crystal_detector>*1000,<liquid:mutatedlivingsolder>*1000)
     .fluidOutputs(<liquid:living_mutation_medium>*2000)
@@ -524,3 +541,108 @@ lcr.recipeBuilder()
     .duration(200)
     .EUt(12000000)
     .buildAndRegister();
+
+bio.findRecipe(120,[<gtadditions:ga_dust:46>],[<liquid:bacterial_growth_medium>*250]).remove();
+
+bio.recipeBuilder()
+    .fluidInputs(<liquid:bacterial_growth_medium>*250)
+    .fluidOutputs(<liquid:depleted_growth_medium>*250)
+    .notConsumable(<liquid:yeem_solution>)
+    .inputs(<gtadditions:ga_dust:46>)
+    .outputs(<gtadditions:ga_dust:46>*2)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister();
+
+bio.findRecipe(120,[<gtadditions:ga_dust:42>],[<liquid:bacterial_growth_medium>*250]).remove();
+
+bio.recipeBuilder()
+    .fluidInputs(<liquid:bacterial_growth_medium>*250)
+    .fluidOutputs(<liquid:depleted_growth_medium>*250)
+    .notConsumable(<liquid:yeem_solution>)
+    .inputs(<gtadditions:ga_dust:42>)
+    .outputs(<gtadditions:ga_dust:42>*2)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister();
+
+mixer.recipeBuilder()  
+    .fluidInputs(<liquid:distilled_water>*1000)
+    .fluidOutputs(<liquid:yeem_solution>*1000)
+    .inputs(<gtadditions:ga_dust:32185>)
+    .duration(200)
+    .EUt(120)
+    .buildAndRegister();
+
+lmixer.recipeBuilder()  
+    .fluidInputs(<liquid:distilled_water>*1000)
+    .fluidOutputs(<liquid:yeem_solution>*1000)
+    .inputs(<gtadditions:ga_dust:32185>)
+    .duration(200)
+    .EUt(120)
+    .buildAndRegister();
+
+distillation_tower.recipeBuilder()
+    .fluidInputs(<liquid:fermented_superlubricenttincture_solution>*1000)
+    .fluidOutputs(<liquid:water>*800,<liquid:fermented_superlubricenttincture>*200)
+    .duration(200)
+    .EUt(80)
+    .buildAndRegister();
+
+bio.recipeBuilder()
+    .fluidInputs(<liquid:fermented_superlubricenttincture>*1000)
+    .inputs(<gtadditions:ga_dust:32>)
+    .chancedOutput(<gtadditions:ga_dust:32207>, 100, 0)
+    .duration(200)
+    .EUt(120)
+    .buildAndRegister();
+
+bio.recipeBuilder()
+    .inputs(<gtadditions:ga_dust:32207>)
+    .notConsumable(<contenttweaker:pad_petri>)
+    .fluidOutputs(<liquid:xerizin>*20)
+    .duration(200)
+    .EUt(800)
+    .buildAndRegister();
+
+bio.recipeBuilder()
+    .fluidInputs(<liquid:bacterial_growth_medium>*250)
+    .fluidOutputs(<liquid:depleted_growth_medium>*250)
+    .notConsumable(<liquid:yeem_solution>)
+    .inputs(<gtadditions:ga_dust:32207>)
+    .outputs(<gtadditions:ga_dust:32207>*2)
+    .duration(100)
+    .EUt(120)
+    .buildAndRegister();
+
+chemical_bath.recipeBuilder()
+    .inputs(<ore:craftingLensBlack>)
+    .fluidInputs(<liquid:xerizin>*100)
+    .outputs(<contenttweaker:biologically_approved_lense>)
+    .duration(200)
+    .EUt(12)
+    .buildAndRegister();
+
+chemReactor.recipeBuilder()
+    .notConsumable(<gtadditions:ga_dust:246>)
+    .fluidInputs(<liquid:ethylene_oxide>*25,<liquid:nonylphenol>*25)
+    .fluidOutputs(<liquid:ethoxylated_nonylphenol>*50)
+    .duration(200)
+    .EUt(299)
+    .buildAndRegister();
+
+lcr.recipeBuilder()
+    .notConsumable(<gtadditions:ga_dust:246>)
+    .fluidInputs(<liquid:ethylene_oxide>*25,<liquid:nonylphenol>*25)
+    .fluidOutputs(<liquid:ethoxylated_nonylphenol>*25)
+    .duration(20)
+    .EUt(299)
+    .buildAndRegister();
+
+distillation_tower.recipeBuilder()
+    .fluidInputs(<liquid:nonoxynol-9_solution>*200)
+    .fluidOutputs(<liquid:nonoxynol-9>*50,<liquid:water>*150)
+    .duration(800)
+    .EUt(1200)
+    .buildAndRegister();
+

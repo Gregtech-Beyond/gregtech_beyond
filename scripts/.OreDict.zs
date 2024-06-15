@@ -16,16 +16,7 @@ import mods.nuclearcraft.IngotFormer;
 
 
 
-val macerator = mods.gregtech.recipe.RecipeMap.getByName("macerator");
-val packer = mods.gregtech.recipe.RecipeMap.getByName("packer");
-val unpacker = mods.gregtech.recipe.RecipeMap.getByName("unpacker");
-val compressor = mods.gregtech.recipe.RecipeMap.getByName("compressor");
-val extruder = mods.gregtech.recipe.RecipeMap.getByName("extruder");
 
-
-<gregtech:meta_item_2:32454>.displayName="Silver Coated Glass Tube";
-<gregtech:meta_item_1:32725>.displayName="Quantum Star";
-<gregtech:meta_item_1:32724>.displayName="Quantum Eye";
 <pneumaticcraft:turbine_blade>.displayName="Metastable Oganesson Plated Naquadah Alloy Turbine Blade";
 <forestry:apatite>.displayName="Apatite Gemstone";
 <forestry:ash>.displayName="Ash Nanoparticles";
@@ -34,27 +25,11 @@ val extruder = mods.gregtech.recipe.RecipeMap.getByName("extruder");
 
 
 
-<appliedenergistics2:controller>.addTooltip(format.red("Requires Research"));
-<avaritia:resource:4>.addTooltip(format.green("True Neutronium"));
-<liquid:obisdianinfuseddraconiummixture>.addTooltip(format.red("made in cells"));
-<liquid:draconiumrichsolution>.addTooltip(format.red("made in cells"));
 <contenttweaker:quantumcontrolcomputermk2>.addTooltip(format.red("WIP"));
 <contenttweaker:quantumcontrolcomputermk3>.addTooltip(format.red("WIP"));
 <contenttweaker:stablestar>.addTooltip(format.red("WIP"));
 <contenttweaker:spacetimecontainingcomputationalunit>.addTooltip(format.red("WIP"));
-<gregtech:meta_item_1:10517>.addTooltip(format.red("WIP"));
-<contenttweaker:elementdr>.addTooltip(format.red("WIP"));
-<contenttweaker:draconiumfragment>.addTooltip(format.red("WIP"));
 <contenttweaker:heavydutyalloyt6>.addTooltip(format.red("WIP"));
-<contenttweaker:elementds>.addTooltip(format.red("WIP"));
-<contenttweaker:selementts>.addTooltip(format.red("WIP"));
-<contenttweaker:elementfm>.addTooltip(format.red("WIP"));
-<contenttweaker:elementlu>.addTooltip(format.red("WIP"));
-<contenttweaker:elementti>.addTooltip(format.red("WIP"));
-<contenttweaker:elementtr>.addTooltip(format.red("WIP"));
-<contenttweaker:selementp>.addTooltip(format.red("WIP"));
-<contenttweaker:elementw>.addTooltip(format.red("WIP"));
-<eternalsingularity:combined_singularity>.addTooltip(format.red("Secret"));
 
 
 
@@ -362,7 +337,7 @@ mods.thermalexpansion.InductionSmelter.removeRecipe(<thermalfoundation:material:
 
 
 
-
+<ore:ingotSignalum>.remove(<thermalfoundation:material:165>);
 <ore:IngotSilver>.remove(<wildnature:silver_ingot>);
 <ore:dustPotassiumFluoride>.remove(<nuclearcraft:compound:4>);
 <ore:plateLead>.remove(<thermalfoundation:material:323>);
@@ -493,17 +468,12 @@ mods.thermalexpansion.InductionSmelter.removeRecipe(<thermalfoundation:material:
 <ore:oreLead>.remove(<nuclearcraft:ore:2>);
 <ore:oreTin>.remove(<nuclearcraft:ore:1>);
 <ore:oreCopper>.remove(<nuclearcraft:ore>);
-<ore:nuggetCosmicNeutronium>.remove(<avaritia:resource:3>);
 <ore:nuggetStellaralloy>.add(<enderio:item_alloy_endergy_nugget:3>);
 <ore:nuggetStellaralloy>.remove(<gregtech:meta_item_1:9569>);
 <ore:ingotStellaralloy>.add(<enderio:item_alloy_endergy_ingot:3>);
 <ore:ingotStellaralloy>.remove(<gregtech:meta_item_1:10569>);
 <ore:dustAsh>.remove(<forestry:ash>);
 <ore:gemApatite>.remove(<forestry:apatite>);
-<ore:ingotSignalum>.remove(<gregtech:meta_item_1:10539>);
-<ore:nuggetSignalum>.remove(<gregtech:meta_item_1:9539>);
-<ore:dustSignalum>.remove(<gregtech:meta_item_1:2539>);
-<ore:dustRegularSignalum>.remove(<gregtech:meta_item_1:2539>);
 <ore:gemRuby>.remove(<projectred-core:resource_item:200>);
 <ore:gemSapphire>.remove(<projectred-core:resource_item:201>);
 <ore:blockNetherStar>.remove(<extendedcrafting:storage:2>);
@@ -537,7 +507,6 @@ mods.thermalexpansion.InductionSmelter.removeRecipe(<thermalfoundation:material:
 <ore:circuitMaster>.remove(<gtadditions:ga_meta_item:32226>);
 <ore:plateIron>.remove(<thaumcraft:plate:1>);
 <ore:plateBrass>.remove(<thaumcraft:plate>);
-<ore:ingotCosmicNeutronium>.remove(<avaritia:resource:4>);
 <ore:titaniumice>.add(<contenttweaker:titaniumcontainingice>);
 <ore:dustSulfur>.remove(<thermalfoundation:material:771>);
 <ore:nuggetLead>.remove(<thaumcraft:nugget:4>);
@@ -562,10 +531,6 @@ mods.thermalexpansion.InductionSmelter.removeRecipe(<thermalfoundation:material:
 <ore:BlockAmethyst>.remove(<wildnature:amethyst_block>);
 <ore:dustSodiumChloride>.remove(<qmd:chemical_dust:3>);
 <ore:dustSalt>.remove(<qmd:chemical_dust:3>);
-
-
-
-
 
 
 

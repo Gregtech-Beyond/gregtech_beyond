@@ -75,7 +75,7 @@ val textile_factory = Builder.start(loc, meta)
         .addDesign(
                 FactoryMultiblockShapeInfo.start()
                 .aisle("     ","CGGGC","CGGGC","CGGGC","     ")
-                .aisle("CCCCC","CMMMC","SGGGE","CGGGC","CCCCC")
+                .aisle("CCCCC","CMMMC","SGGGE","CMMMC","CCCCC")
                 .aisle("     ","CGGGC","CGGGC","CGGGC","     ")
                 .where("M", <metastate:gregtech:turbine_casing:2>)
                 .where("G", <metastate:gtadditions:ga_transparent_casing>)
@@ -109,4 +109,26 @@ textile_factory.recipeMap.recipeBuilder()
     .outputs(<contenttweaker:wovenkevlar>)
     .duration(512)
     .EUt(9000)
+    .buildAndRegister();
+
+textile_factory.recipeMap.recipeBuilder()
+    .inputs(<contenttweaker:cotton_sheet>)
+    .outputs(<contenttweaker:cheese_cloth>)
+    .duration(200)
+    .EUt(120)
+    .buildAndRegister();
+
+textile_factory.recipeMap.recipeBuilder()
+    .outputs(<contenttweaker:cotton_sheet>)
+    .inputs(<contenttweaker:cotton>)
+    .duration(200)
+    .EUt(120)
+    .buildAndRegister();
+
+textile_factory.recipeMap.recipeBuilder()
+    .fluidInputs(<liquid:pre_nylon_mix>*1000)
+    .notConsumable(<gregtech:meta_item_1:32301>)
+    .outputs(<gregtech:meta_item_1:12630>)
+    .duration(700)
+    .EUt(180)
     .buildAndRegister();

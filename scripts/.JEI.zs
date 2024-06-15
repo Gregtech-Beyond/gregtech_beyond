@@ -8,6 +8,8 @@ import crafttweaker.block.IBlock;
 import mods.jei.JEI.removeAndHide;
 import mods.jei.JEI.hideCategory;
 
+mods.jei.JEI.hideCategory("gregtech:ion_implanter");
+mods.jei.JEI.hideCategory("gregtech:manufactory");
 mods.jei.JEI.hideCategory("gregtech:fischer_tropsch_reactor");
 mods.jei.JEI.hideCategory("forestry.squeezer");
 mods.jei.JEI.hideCategory("gregtech:textile_factory");
@@ -22,6 +24,7 @@ mods.jei.JEI.hideCategory("gregtech:microscope");
 mods.jei.JEI.hideCategory("gregtech:roasters");
 mods.jei.JEI.hideCategory("gregtech:rock_crusher");
 mods.jei.JEI.hideCategory("gregtech:rotary_evaporator");
+mods.jei.JEI.hideCategory("gregtech:drone_pad");
 mods.jei.JEI.hideCategory("gregtech:scanner");
 mods.jei.JEI.hideCategory("gregtech:vacuum_ejection_chamber");
 mods.jei.JEI.hideCategory("gregtech:water_collector");
@@ -45,7 +48,6 @@ mods.jei.JEI.hideCategory("gregtech:froth_flotation_cell");
 mods.jei.JEI.hideCategory("gregtech:gravity_separator");
 mods.jei.JEI.hideCategory("gregtech:heat_exchanger");
 mods.jei.JEI.hideCategory("gregtech:hyper_chemical_plant");
-mods.jei.JEI.hideCategory("gregtech:matter_dissolver");
 mods.jei.JEI.hideCategory("gregtech:miracle_top");
 mods.jei.JEI.hideCategory("gregtech:molecular_transformer");
 mods.jei.JEI.hideCategory("gregtech:naquadah_fuel_refinery");
@@ -90,9 +92,15 @@ mods.jei.JEI.hideCategory("xu2_machine_extrautils2:crusher");
 mods.jei.JEI.hideCategory("extrautils2.terraformer");
 mods.jei.JEI.hideCategory("EIOTank");
 mods.jei.JEI.hideCategory("forestry.bottler");
-mods.jei.JEI.hideCategory("thermalexpansion.smelter");
-mods.jei.JEI.hideCategory("thermalexpansion.smelter_pyrotheum");
 mods.jei.JEI.hideCategory("gtadditions:disassembler");
+mods.jei.JEI.hideCategory("gregtech:rocket_one");
+mods.jei.JEI.hideCategory("gregtech:rocket_two");
+mods.jei.JEI.hideCategory("gregtech:rocket_three");
+mods.jei.JEI.hideCategory("gregtech:pvd_unit");
+mods.jei.JEI.hideCategory("gregtech:mega_chemical_reactor");
+mods.jei.JEI.hideCategory("gregtech:bacterial_vat");
+mods.jei.JEI.hideCategory("gregtech:gravity_settler_tank");
+mods.jei.JEI.hideCategory("gregtech:enzymatic_hydrolisis_tank");
 
 
 
@@ -188,7 +196,6 @@ val itemstoRemove =
 <gregtech:machine:712>,
 <gregtech:machine:713>,
 <gregtech:machine:724>,
-<gregtech:frame_invar>,
 <gregtech:machine:511>,
 <gregtech:meta_item_1:2238>,
 <gregtech:meta_item_1:32680>,
@@ -828,12 +835,6 @@ val itemstoRemove =
 <enderio:item_redstone_sensor_filter>,
 <enderio:item_redstone_sensor_filter>,
 <enderio:item_redstone_sensor_filter>,
-<deepmoblearning:machine_casing>,
-<deepmoblearning:soot_covered_plate>,
-<deepmoblearning:simulation_chamber>,
-<deepmoblearning:trial_keystone>,
-<deepmoblearning:trial_key>,
-<deepmoblearning:trial_keystone>,
 <chisel:paper>,
 <simplybackpacks:commonbackpack>.withTag({inv: {Size: 18, Items: []}, filter: {Size: 16, Items: []}}),
 <simplybackpacks:uncommonbackpack>.withTag({inv: {Size: 33, Items: []}, filter: {Size: 16, Items: []}}),
@@ -932,7 +933,6 @@ val itemstoRemoveAndHide =
 <wildnature:ruby_block>,
 <wildnature:ruby_ore>,
 <wildnature:silver_block>,
-<wildnature:silver_ore>,
 <wildnature:malachite_ore>,
 <wildnature:sapphire_block>,
 <wildnature:sapphire_ore>,
@@ -949,9 +949,6 @@ val itemstoRemoveAndHide =
 <energycontrol:item_component:1>,
 <energycontrol:item_component>,
 <energycontrol:kit_assembler>,
-<gregtech:meta_item_1:10527>,
-<gregtech:meta_item_1:9527>,
-<gregtech:meta_block_compressed_32:15>,
 <nuclearcraft:fluid_sulfuric_acid>,
 <forestry:wood_pulp>,
 <nuclearcraft:compound:7>,
@@ -1124,7 +1121,6 @@ val itemstoRemoveAndHide =
 <gregtech:meta_block_compressed_32:11>,
 <thaumcraft:plate>,
 <thaumcraft:plate:1>,
-<deepmoblearning:extraction_chamber>,
 <thermalfoundation:material:772>,
 <appliedenergistics2:material:2>,
 <extendedcrafting:storage:2>,
@@ -1476,37 +1472,37 @@ for item in itemstoRemoveAndHide {
 
 
 
-mods.jei.JEI.addDescription(<contenttweaker:io>,"Planet Properties:           Veins:                            Mica, Molybdenite, Molybdenum, Monazite, Opal                     Rocket Requirement:        T5   Breathable: No                   Corrosive: No                   Atmosphere: No                    Temperature: -174.0 C, Gravity: 48%   Type : Moon, Class: Cold Selena   Day Lenght: 42h   Has Dungeon: Yes");
-mods.jei.JEI.addDescription(<contenttweaker:callisto>,"Planet Properties:     Veins:   Mica, Molybdenite, Molybdenum, Monazite, Naquadah   Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -174.0 C, Gravity: 46%   Type : Moon, Class: Cold Selena   Day Lenght: 154h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:europa>,"Planet Properties:     Veins:   Dolomite, Galena, Pitchblende, Platinum, Platinum Salt, Precious, Quartz, Tungstate  Rocket Requirement:   T5   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -174.0 C, Gravity: 38%   Type : Moon, Class: Cold Selena   Day Lenght: 58h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:ganymede>,"Planet Properties:     Veins:   Mana Infused, Molybdenum, Monazite, Mythrillium, Naquadah, Naquadah2  Rocket Requirement:   T5   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -174.0 C, Gravity: 43%   Type : Moon, Class: Cold Selena   Day Lenght: 102h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:mercury>,"Planet Properties:     Veins:   Iron, Kaolinite, Kyanite, Lapis, Lignite Coal, Magnetite, Manganese, Phosphate  Rocket Requirement:   T3   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 120.0 C, Gravity: 48%   Type : Planet, Class: Hot Selena   Day Lenght: 176h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:venus>,"Planet Properties:     Veins:   Kyanite, Olivine, Sheldonite, Uranium  Rocket Requirement:   T2   Breathable: No, Corrosive: No, Atmosphere: CO2, Nitrogen   Temperature: 150.0 C, Gravity: 62%   Type : Planet, Class: Hot Desert   Day Lenght: 720h   Has Dungeon: Yes");
-mods.jei.JEI.addDescription(<contenttweaker:moon>,"Planet Properties:     Veins:   Beryllium, Diamond, Quartz, Rutile   Rocket Requirement:   T1   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 30.0 C, Gravity: 38%   Type : Moon, Class: Comfort Selena   Day Lenght: 192h   Has Dungeon: Yes");
-mods.jei.JEI.addDescription(<contenttweaker:mars>,"Planet Properties:     Veins:   Bornite, Cassiterite, Chalcopyrite1, Chalcopyrite, Coal, Platinum, Galena, Dolomite, Diamond, Deep Iron   Rocket Requirement:   T2   Breathable: No, Corrosive: No, Atmosphere:CO2, Argon, Nitrogen   Temperature: -60.0 C, Gravity: 42%   Type : Planet, Class: Cold Desert   Day Lenght: 24h   Has Dungeon: Yes");
-mods.jei.JEI.addDescription(<contenttweaker:phobos>,"Planet Properties:     Veins:   Chalcopyrite, Coal, Deep Iron, Sodalite, Sulfur2, Talc   Rocket Requirement:   T2   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -48.0 C, Gravity: 34%   Type : Moon, Class: Cool Selena   Day Lenght: 12h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:ceres>,"Planet Properties:     Veins:   Mana Infused, Molybdenite, Nickel, Olivine2, Platinum Salt, Precious, Quartz   Rocket Requirement:   T4   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -120.0 C, Gravity: 36%   Type : Planet, Class: Cold Selena   Day Lenght: 10h   Has Dungeon: Yes");
-mods.jei.JEI.addDescription(<contenttweaker:asteroids>,"Planet Properties:     Veins:   Black Granite, Galena, Monazite, Mythrillium, Titanium Ice, Vinteum   Rocket Requirement:   T4   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -45.0 C, Gravity: 28%   Type : Asteroid, Class: Asteroid   Day Lenght: 0h   Has Dungeon: Yes");
-mods.jei.JEI.addDescription(<contenttweaker:enceladus>,"Planet Properties:     Veins:   Alumina, Apatite, Basalt, Basaltic Mineral, Beryllium, Black Granite, Bortnite, Cassiterite, Chalcopyrite1   Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -240.0 C, Gravity: 42%   Type : Moon, Class: Cold Selena   Day Lenght: 32h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:titan>,"Planet Properties:     Veins:   Nether Quartz, Titanium Ice, Tetrahedrite, Rutile, Nickel, Natural Gas Plate   Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -240.0 C, Gravity: 42%   Type : Moon, Class: Cold Selena   Day Lenght: 32h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:miranda>,"Planet Properties:     Veins:   Deep Iron, Diamond, Dolomite, Galena, Heavy Oil, High-Class Uranium, Infused Gold   Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -216.0 C, Gravity: 43%   Type : Moon, Class: Cold Selena   Day Lenght: 33h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:triton>,"Planet Properties:     Veins:   Apatite, Basalt, Basaltic Mineral, Beryllium, Black Granite, Bornite, Dolomite, Galena, Heavy Oil, High-Class Uranium, Infused Gold, Iron   Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -237.0 C, Gravity: 41%   Type : Moon, Class: Cold Selena   Day Lenght: 145h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:pluto>,"Planet Properties:     Veins:   Mythrillium, Pitchblende, Platinum Salt, Precious, Redstone, Rutile   Rocket Requirement:   T6   Breathable: No, Corrosive: No,Atmosphere: Nitrogen   Temperature: -234.0 C, Gravity: 38%   Type : Planet, Class: Cold Selena   Day Lenght: 98h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:kupiterbelt>,"Planet Properties:     Veins:   Natural Gas Plate, Netherquartz, Nickel, Oilsands, Olivine2   Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -246.0 C, Gravity: 0%   Type : Planet, Class: Cold Asteroid   Day Lenght: 0h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:haumea>,"Planet Properties:     Veins:   Dolomite, Galena, Iron, Infused Gold, High-Class Uranium, Heavy Oil    Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -249.0 C, Gravity: 33%   Type : Planet, Class: Cold Selena   Day Lenght: 12h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:barnadac>,"Planet Properties:     Veins:    Alumina, Coal, Diamond, Dolomite, Pitchblende, Sheldonite   Rocket Requirement:   T6 + Sublight   Breathable: Yes, Corrosive: No, Atmosphere: CO2, Oxygen, Argon   Temperature: 30.0 C, Gravity: 89%   Type : Planet, Class: Comfort Selena   Day Lenght: 24h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:fronos>,"Planet Properties:     Veins:    Infused Gold, Light Oil, Marble, Naquadah, Oilsands   Rocket Requirement:   T6 + Sublight   Breathable: Yes, Corrosive: No, No Atmosphere   Temperature: 30.0 C, Gravity: 0%   Type : Planet, Class: Comfort Terra   Day Lenght: 24h   Has Dungeon: Yes");
-mods.jei.JEI.addDescription(<contenttweaker:nibiru>,"Planet Properties:     Veins:    Mythrillium, Naquadah2, Naquadah, Natural Gas, Netherquartz, Nickel   Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: Yes, No Atmosphere   Temperature: 30.0 C, Gravity: 87%   Type : Planet, Class: Comfort Selena   Day Lenght: 144h   Has Dungeon: Yes");
-mods.jei.JEI.addDescription(<contenttweaker:chalos>,"Planet Properties:     Veins:    Platinum Salt, Precious, Quartz, Red Granite, Redstone, Rutile   Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 30.0 C, Gravity: 73%   Type : Planet, Class: Comfort Selena   Day Lenght: 48h   Has Dungeon: Yes");
-mods.jei.JEI.addDescription(<contenttweaker:diona>,"Planet Properties:     Veins:    Diamond, Dolomite, High-Class Uranium, Kaolinite, Kyanite, Mythrillium, Naquadah, Natural Gas Plate   Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 30.0 C, Gravity: 35%   Type : Planet, Class: Comfort Selena   Day Lenght: 96h   Has Dungeon: Yes");
-mods.jei.JEI.addDescription(<contenttweaker:proximab>,"Planet Properties:     Veins:    Manganese, Mica, Molybdenite, Naquadah, Netherquartz, Nickel, Oilsands, Platinum, Redstone, Rutile, Sapphire, Tetrahedrite, Tin, Tungstate2, Uranium, Vinteum    Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No,Atmosphere: CO2, Oxygen   Temperature: -15.0 C, Gravity: 84%   Type : Planet, Class: Comfort Selena   Day Lenght: 175h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:taucetif>,"Planet Properties:     Veins:    Alumina, Apatite, Bornite, Chalcopyrite, Diamond, Iron, Lapis, Magnetite, Mana Infused   Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -6.0 C, Gravity: 83%   Type : Planet, Class: Comfort Selena   Day Lenght: 36h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:trappist1c>,"Planet Properties:     Veins:    Mica, Molybedenum, Monazite, Mythrillium, Naqudah2, Naqudah, Natural Gas Plate    Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 60.0 C, Gravity: 35%   Type : Planet, Class: Hot Selena   Day Lenght: 32h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:trappist1e>,"Planet Properties:     Veins:   High-Class Uranium, Infused Gold, Magnetite2, Sapphire, Sheldonite, Sodalite, Sulfur2, Talc, Tenorite, Tetrahedrite   Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 150.0 C, Gravity: 35%   Type : Planet, Class: Hot Selena   Day Lenght: 24h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:yzcetib>,"Planet Properties:     Veins:    Magnetite2, Mana Infused, Manganese, Molybdenite, Monazite, Mythrillium   Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 60.0 C, Gravity: 70%   Type : Planet, Class: Hot Selena   Day Lenght: 23h   Has Dungeon: Yes");
-mods.jei.JEI.addDescription(<contenttweaker:yzcetic>,"Planet Properties:     Veins:    Dolomite, Galena, High-Class Uranium, Infused Gold, kyanite, Lapis, Lignite Coal   Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 240.0 C, Gravity: 70%   Type : Planet, Class: Hot Selena   Day Lenght: 28h   Has Dungeon: Yes");
-mods.jei.JEI.addDescription(<contenttweaker:yzcetid>,"Planet Properties:     Veins:    Diamond, Beryllium, Black Granite, Cassiterite, Bornite, Chalcopyrite, Coal, Deep Iron, Dolomite, Galena  Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 60.0 C, Gravity: 63%   Type : Planet, Class: Hot Selena   Day Lenght: 35h   Has Dungeon: No");
-mods.jei.JEI.addDescription(<contenttweaker:overworld>,"Planet Properties:     Veins:   Alumina, Apatite, Basaltic Mineral, Bornite, Cassiterite, Chalcopyrite, Coal, Galena, Salts, Sodalite, Tin, Manganese, Mica, Quartz, Light Oil, Lignite Coal, Lapis, Diamond,   Rocket Requirement:   T0   Breathable: Yes, Corrosive: No, Atmosphere: Nitrogen, Oxygen, Argon   Temperature: 30.0 C, Gravity: 100%   Type : Planet, Class: Comfort Terra   Day Lenght: 24h   Has Dungeon: Yes");
+mods.jei.JEI.addDescription(<contenttweaker:io>,"Planet Properties:              Rocket Requirement:        T5   Breathable: No                   Corrosive: No                   Atmosphere: No                    Temperature: -174.0 C, Gravity: 48%   Type : Moon, Class: Cold Selena   Day Lenght: 42h   Has Dungeon: Yes");
+mods.jei.JEI.addDescription(<contenttweaker:callisto>,"Planet Properties:        Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -174.0 C, Gravity: 46%   Type : Moon, Class: Cold Selena   Day Lenght: 154h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:europa>,"Planet Properties:      Rocket Requirement:   T5   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -174.0 C, Gravity: 38%   Type : Moon, Class: Cold Selena   Day Lenght: 58h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:ganymede>,"Planet Properties:       Rocket Requirement:   T5   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -174.0 C, Gravity: 43%   Type : Moon, Class: Cold Selena   Day Lenght: 102h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:mercury>,"Planet Properties:       Rocket Requirement:   T3   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 120.0 C, Gravity: 48%   Type : Planet, Class: Hot Selena   Day Lenght: 176h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:venus>,"Planet Properties:       Rocket Requirement:   T2   Breathable: No, Corrosive: No, Atmosphere: CO2, Nitrogen   Temperature: 150.0 C, Gravity: 62%   Type : Planet, Class: Hot Desert   Day Lenght: 720h   Has Dungeon: Yes");
+mods.jei.JEI.addDescription(<contenttweaker:moon>,"Planet Properties:        Rocket Requirement:   T1   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 30.0 C, Gravity: 38%   Type : Moon, Class: Comfort Selena   Day Lenght: 192h   Has Dungeon: Yes");
+mods.jei.JEI.addDescription(<contenttweaker:mars>,"Planet Properties:        Rocket Requirement:   T2   Breathable: No, Corrosive: No, Atmosphere:CO2, Argon, Nitrogen   Temperature: -60.0 C, Gravity: 42%   Type : Planet, Class: Cold Desert   Day Lenght: 24h   Has Dungeon: Yes");
+mods.jei.JEI.addDescription(<contenttweaker:phobos>,"Planet Properties:       Rocket Requirement:   T2   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -48.0 C, Gravity: 34%   Type : Moon, Class: Cool Selena   Day Lenght: 12h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:ceres>,"Planet Properties:        Rocket Requirement:   T4   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -120.0 C, Gravity: 36%   Type : Planet, Class: Cold Selena   Day Lenght: 10h   Has Dungeon: Yes");
+mods.jei.JEI.addDescription(<contenttweaker:asteroids>,"Planet Properties:        Rocket Requirement:   T4   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -45.0 C, Gravity: 28%   Type : Asteroid, Class: Asteroid   Day Lenght: 0h   Has Dungeon: Yes");
+mods.jei.JEI.addDescription(<contenttweaker:enceladus>,"Planet Properties:         Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -240.0 C, Gravity: 42%   Type : Moon, Class: Cold Selena   Day Lenght: 32h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:titan>,"Planet Properties:       Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -240.0 C, Gravity: 42%   Type : Moon, Class: Cold Selena   Day Lenght: 32h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:miranda>,"Planet Properties:       Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -216.0 C, Gravity: 43%   Type : Moon, Class: Cold Selena   Day Lenght: 33h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:triton>,"Planet Properties:       Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -237.0 C, Gravity: 41%   Type : Moon, Class: Cold Selena   Day Lenght: 145h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:pluto>,"Planet Properties:       Rocket Requirement:   T6   Breathable: No, Corrosive: No,Atmosphere: Nitrogen   Temperature: -234.0 C, Gravity: 38%   Type : Planet, Class: Cold Selena   Day Lenght: 98h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:kupiterbelt>,"Planet Properties:        Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -246.0 C, Gravity: 0%   Type : Planet, Class: Cold Asteroid   Day Lenght: 0h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:haumea>,"Planet Properties:         Rocket Requirement:   T6   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -249.0 C, Gravity: 33%   Type : Planet, Class: Cold Selena   Day Lenght: 12h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:barnadac>,"Planet Properties:       Rocket Requirement:   T6 + Sublight   Breathable: Yes, Corrosive: No, Atmosphere: CO2, Oxygen, Argon   Temperature: 30.0 C, Gravity: 89%   Type : Planet, Class: Comfort Selena   Day Lenght: 24h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:fronos>,"Planet Properties:        Rocket Requirement:   T6 + Sublight   Breathable: Yes, Corrosive: No, No Atmosphere   Temperature: 30.0 C, Gravity: 0%   Type : Planet, Class: Comfort Terra   Day Lenght: 24h   Has Dungeon: Yes");
+mods.jei.JEI.addDescription(<contenttweaker:nibiru>,"Planet Properties:         Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: Yes, No Atmosphere   Temperature: 30.0 C, Gravity: 87%   Type : Planet, Class: Comfort Selena   Day Lenght: 144h   Has Dungeon: Yes");
+mods.jei.JEI.addDescription(<contenttweaker:chalos>,"Planet Properties:      Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 30.0 C, Gravity: 73%   Type : Planet, Class: Comfort Selena   Day Lenght: 48h   Has Dungeon: Yes");
+mods.jei.JEI.addDescription(<contenttweaker:diona>,"Planet Properties:         Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 30.0 C, Gravity: 35%   Type : Planet, Class: Comfort Selena   Day Lenght: 96h   Has Dungeon: Yes");
+mods.jei.JEI.addDescription(<contenttweaker:proximab>,"Planet Properties:          Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No,Atmosphere: CO2, Oxygen   Temperature: -15.0 C, Gravity: 84%   Type : Planet, Class: Comfort Selena   Day Lenght: 175h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:taucetif>,"Planet Properties:         Rocket Requirement:	T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: -6.0 C, Gravity: 83%   Type : Planet, Class: Comfort Selena   Day Lenght: 36h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:trappist1c>,"Planet Properties:         Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 60.0 C, Gravity: 35%   Type : Planet, Class: Hot Selena   Day Lenght: 32h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:trappist1e>,"Planet Properties:        Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 150.0 C, Gravity: 35%   Type : Planet, Class: Hot Selena   Day Lenght: 24h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:yzcetib>,"Planet Properties:       Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 60.0 C, Gravity: 70%   Type : Planet, Class: Hot Selena   Day Lenght: 23h   Has Dungeon: Yes");
+mods.jei.JEI.addDescription(<contenttweaker:yzcetic>,"Planet Properties:        Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 240.0 C, Gravity: 70%   Type : Planet, Class: Hot Selena   Day Lenght: 28h   Has Dungeon: Yes");
+mods.jei.JEI.addDescription(<contenttweaker:yzcetid>,"Planet Properties:      Rocket Requirement:   T6 + Sublight   Breathable: No, Corrosive: No, No Atmosphere   Temperature: 60.0 C, Gravity: 63%   Type : Planet, Class: Hot Selena   Day Lenght: 35h   Has Dungeon: No");
+mods.jei.JEI.addDescription(<contenttweaker:overworld>,"Planet Properties:    Rocket Requirement:   T0   Breathable: Yes, Corrosive: No, Atmosphere: Nitrogen, Oxygen, Argon   Temperature: 30.0 C, Gravity: 100%   Type : Planet, Class: Comfort Terra   Day Lenght: 24h   Has Dungeon: Yes");
 
 
 
